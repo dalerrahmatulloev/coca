@@ -22,12 +22,10 @@ import Frame1171275177 from "../../assets/Frame 1171275177.png";
 import BarChart from "../../assets/Bar Chart.png";
 import StatisticLight from "../../assets/Statistic - Light.png";
 import CustomerGrowthLight from "../../assets/Customer Growth - Light.png";
-import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import "../Home/style.css";
-import { Pagination } from "swiper/modules";
+import "./style.css";
 import Ender from "./components/Ender/Ender";
 import Rating from "../../assets/Rating.svg";
 export default function Home() {
@@ -58,11 +56,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1500"
-            className="relative"
-          >
+          <div data-aos="zoom-in">
             <img
               className="absolute sm:w-full sm:left-0 top-[155px] left-[133px]"
               src={SalesLight}
@@ -82,7 +76,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main>
+      <main className="overflow-hidden">
         <section>
           <div className="bg-[#1D1E25] sm:p-[30px_0px] text-left p-[100px_0px]">
             <h1 className="w-[816px] sm:w-full text-[56px] text-[#FFFFFF] font-[600] leading-[67.2px] sm:pl-[10px] sm:text-[26px] sm:leading-[32px]">
@@ -91,9 +85,8 @@ export default function Home() {
             <p className="text-[#7E8492] sm:text-[16px] sm:w-full text-[18px] w-[660px] sm:pl-[10px] mt-[24px]">
               {t("main.section1.div1.p")}
             </p>
-            <div className="flex justify-between sm:flex-wrap mt-[80px]">
-              <div data-aos="fade-up"
-     data-aos-duration="3000" className="">
+            <div className="flex sm:px-[10px] justify-between sm:flex-wrap mt-[80px]">
+              <div data-aos="fade-up" data-aos-duration="3000" className="">
                 <div className="w-[413px] h-[250px] sm:w-full sm:h-auto">
                   <img src={Icon1} alt="" />
                   <h2 className="mt-[24px] leading-[42px] text-[32px] text-white font-[600] w-[249px]">
@@ -115,8 +108,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <div data-aos="fade-up"
-     data-aos-duration="3000" className="sm:mt-[50px]">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="3000"
+                className="sm:mt-[50px]"
+              >
                 <div className="w-[413px] h-[250px] sm:w-full sm:h-auto">
                   <img src={Icon3} alt="" />
                   <h2 className="mt-[24px] leading-[42px] text-[32px] text-white font-[600] w-[249px]">
@@ -184,7 +180,10 @@ export default function Home() {
 
         <section>
           <div className="flex justify-between items-center sm:gap-y-[10px] sm:flex-wrap sm:mt-[30px] mt-[66px]">
-            <div data-aos="flip-right" className="text-left w-[176px] sm:w-[145px]">
+            <div
+              data-aos="flip-right"
+              className="text-left w-[176px] sm:w-[145px]"
+            >
               <h1 className="text-[64px] font-[600] sm:text-[32px] dark:text-[rgb(255,255,255)]">
                 17k
               </h1>
@@ -195,7 +194,10 @@ export default function Home() {
 
             <div className="bg-[#CED1D8] sm:h-[64px] w-[1px] h-[99px]"></div>
 
-            <div data-aos="flip-right" className="text-left w-[151px] sm:w-[130px]">
+            <div
+              data-aos="flip-right"
+              className="text-left w-[151px] sm:w-[130px]"
+            >
               <h1 className="text-[64px] sm:text-[32px] font-[600] dark:text-[white]">
                 15+{" "}
               </h1>
@@ -206,7 +208,10 @@ export default function Home() {
 
             <div className="bg-[#CED1D8] sm:h-[64px] w-[1px] h-[99px]"></div>
 
-            <div data-aos="flip-left" className="text-left w-[199px] sm:w-[160px]">
+            <div
+              data-aos="flip-left"
+              className="text-left w-[199px] sm:w-[160px]"
+            >
               <h1 className="text-[64px] sm:text-[32px] font-[600] dark:text-[white]">
                 50+{" "}
               </h1>
@@ -217,7 +222,10 @@ export default function Home() {
 
             <div className="bg-[#CED1D8] sm:h-[64px] w-[1px] h-[99px]"></div>
 
-            <div data-aos="flip-left" className="text-left w-[199px] sm:w-[143px]">
+            <div
+              data-aos="flip-left"
+              className="text-left w-[199px] sm:w-[143px]"
+            >
               <h1 className="text-[64px] sm:text-[32px] font-[600] dark:text-[white]">
                 100+{" "}
               </h1>
@@ -249,7 +257,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-wrap sm:mt-[20px] justify-between gap-y-[10px] w-[730px] sm:w-full">
+            <div
+              data-aos="zoom-in"
+              className="flex flex-wrap sm:mt-[20px] justify-between gap-y-[10px] w-[730px] sm:w-full"
+            >
               <img className="sm:w-[48%]" src={AirbnbLogo} alt="" />
               <img className="sm:w-[48%]" src={AmazonLogo} alt="" />
               <img className="sm:w-[48%]" src={FedExLogo} alt="" />
@@ -271,7 +282,10 @@ export default function Home() {
               {t("main.section3.div1.p")}
             </p>
             <div className="flex flex-wrap justify-between items-center mt-[80px] sm:justify-center gap-y-[56px]">
-              <div className="w-[568px] sm:w-full flex justify-between">
+              <div
+                data-aos="fade-right"
+                className="w-[568px] sm:w-full flex justify-between"
+              >
                 <img
                   className="sm:w-[160px] sm:h-[216px]"
                   src={Frame1171275175}
@@ -287,7 +301,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-[568px] sm:w-full flex justify-between">
+              <div
+                data-aos="fade-left"
+                className="w-[568px] sm:w-full flex justify-between"
+              >
                 <img
                   className="sm:w-[160px] sm:h-[216px]"
                   src={Frame1171275176}
@@ -303,7 +320,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-[568px] sm:w-full flex justify-between">
+              <div
+                data-aos="fade-right"
+                className="w-[568px] sm:w-full flex justify-between"
+              >
                 <img
                   className="sm:w-[160px] sm:h-[216px]"
                   src={Frame1171275178}
@@ -319,7 +339,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-[568px] sm:w-full flex justify-between">
+              <div
+                data-aos="fade-left"
+                className="w-[568px] sm:w-full flex justify-between"
+              >
                 <img
                   className="sm:w-[160px] sm:h-[216px]"
                   src={Frame1171275177}
@@ -375,41 +398,19 @@ export default function Home() {
               </div>
 
               <div className="hidden sm:block pb-[20px]">
-                <Swiper
-                  slidesPerView={"auto"}
-                  spaceBetween={10}
-                  modules={[Pagination]}
-                  className="mySwiper"
-                >
-                  <SwiperSlide style={{ width: "299px" }}>
-                    <div className="w-[299px]">
+                <Swiper className="mySwiper">
+                  <SwiperSlide>
+                    <div data-aos="zoom-in-right" className="w-[340px]">
                       <img
-                        className="h-[191px] "
                         src="https://s3-alpha-sig.figma.com/img/8f24/e625/0401d8ff44ee193630b53e9e24acab9f?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NwQ-auAJkhbD8K6aXEF2hLpgV6WcYqMt~IteHWPElfY-s-DXH7WQ2vijAHMLghNpP1M5f1TcR3H598BF2uziuEo5SHooI~-k1uJVgND9Q13wjjeFfLSP0IAgBTU4ANJjpg5pSy~KTiyn14IXSjSm8NUa~VC3C4AFoF1pvWr-o0cNC8QF6R3B8zNkspJBW7mTrlb1QToPtqiNkNoNFIwBm8X-GY0QBhKsydqVVDFJtPzyzpHPSaSep5jsOBZ44kyjpotZ7Xar6-yhO5o1kwbyh7~69yiuRQfObQdRrnLpSCualskhTmD-lvz96VJvJBMM15219yHgW3RsBI68eg8IaA__"
                         alt=""
                       />
-                      <div className="flex sm:text-[12px] sm:mt-[3px] text-[#7E8492] mt-[16px] justify-between items-center">
+                      <div className="flex sm:text-[13px] sm:mt-[3px] text-[#7E8492] mt-[16px] justify-between items-center">
                         <p>{t("main.section3.div2.div.card1.p1")}</p>
                         <p>{t("main.section3.div2.div.card1.p2")}</p>
                       </div>
-                      <h2 className="text-[32px] sm:mt-[16px] sm:text-[16px] sm:leading-[24px] text-[black] text-left font-[600] leading-[48px]">
+                      <h2 className="text-[32px] sm:mt-[13px] sm:text-[20px] sm:leading-6 text-left font-[600] leading-[48px] dark:text-[white]">
                         {t("main.section3.div2.div.card1.h2")}
-                      </h2>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide style={{ width: "299px" }}>
-                    <div className="w-[299px]">
-                      <img
-                        className="h-[191px] "
-                        src="https://s3-alpha-sig.figma.com/img/4699/bb7a/8fa49082b01dafe3cac61bd3e9bd13b9?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cV6hTAz~bARw26mwfULQtPhURHlQ1Cj7AXKXoI6eELp7b0jzTwWy0tw07Eob-dAZDITuHZ18pNN69eIh~wo012-Xl8V8lV6hsx48PpAkIXksi-WYnkKGIMhtb3ll8aLEM~9d8sEPsY458Tcy9ZACrSInqqBRVscVYmC312r4rSbQo8xZXmi0kOVE2be15-GLxvI5ZEhLPV2eEl1rtiny8YvnOP7RH9SZipCiPs1z12YyR95zDapzUfIGH8~Cnw934q-CwHmEwudKOKetTave~8PNVExnNomyyeBu29JQNNJCuURZ5ri2R5DrrgmlEyEHT9IH7Q~nRRfNuYqbaGbJVg__"
-                        alt=""
-                      />
-                      <div className="flex sm:text-[12px] sm:mt-[3px] text-[#7E8492] mt-[16px] justify-between items-center">
-                        <p>{t("main.section3.div2.div.card2.p1")}</p>
-                        <p>{t("main.section3.div2.div.card2.p2")}</p>
-                      </div>
-                      <h2 className="text-[32px] sm:mt-[16px] sm:text-[16px] sm:leading-[24px] text-[black] text-left font-[600] leading-[48px]">
-                        {t("main.section3.div2.div.card2.h2")}
                       </h2>
                     </div>
                   </SwiperSlide>
@@ -427,7 +428,11 @@ export default function Home() {
                 {t("main.section3.div3.p")}
               </p>
             </div>
-            <div className="mt-[100px]">
+            <div
+              data-aos="flip-down"
+              data-aos-duration="1000"
+              className="mt-[100px]"
+            >
               <Ender img={Rating} />
             </div>
           </div>

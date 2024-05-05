@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import ButtonArrow from "./../../assets/Button Arrow.svg"
+import ButtonArrow from "./../../assets/Button Arrow.svg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,7 +14,7 @@ import { Pagination } from "swiper/modules";
 export default function Blog() {
   return (
     <>
-      <header>
+      <header className="overflow-hidden">
         <div className="flex pt-[87px] sm:pt-[20px] sm:pb-[50px] pb-[141px] sm:flex-wrap sm:justify-center items-center justify-between">
           <div className="text-left w-[1200px] sm:w-full">
             <h1 className="text-[80px] sm:w-full w-[959px] dark:text-[#8b8282] sm:text-[30px] font-[700]">
@@ -39,10 +39,14 @@ export default function Blog() {
             <p>Customer Success</p>
           </div>
 
-          <div className="mt-[90px]">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            className="mt-[90px]"
+          >
             <Swiper
               slidesPerView={"auto"}
-              spaceBetween={0}
+              spaceBetween={20}
               pagination={{
                 clickable: true,
               }}
@@ -111,7 +115,7 @@ export default function Blog() {
       <main>
         <section>
           <div className="bg-[#1D1E25] flex-wrap py-[120px] sm:py-[60px] sm:px-[10px] sm:mt-[80px] mt-[168px] flex justify-between">
-            <div className="">
+            <div data-aos="fade-right" data-aos-duration="1000" className="">
               <div className="w-[584px] sm:w-full">
                 <img
                   src="https://s3-alpha-sig.figma.com/img/e21d/b0b8/a9999f6992d296d9502a77ccb55b7283?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fAJ7WQe~GVA4-AknDtnVspSLZMMd23B2d6xkbzp2Z4VVldWY1ocu3AihITiSbwbwaMcy-ERZiMaiHv7lRva3ePfES5MxICzvoB~IhLqTAmRtiID0eQmzkgssUYiCNAXZqf9qmWGbQCjtnBoxkyqMnjHtfcUDY24fIpyaI9VOK8usm8IrSMpeMwfUUGvGV8t4JItHRauNDHZu05jmru9oHzhYsi3MFBOuDn-JQi4c-vs5ep4QU5B1oHEUBa1xdfhu2ta1SfMMuW0IlR3Kv82u6NKNM1NRtgLO4HqtwEpbkZbucI~jUsrhuH-6bwUIkCtufcbttURI0eXA-jmXaZ9bCQ__"
@@ -143,7 +147,11 @@ export default function Blog() {
               </div>
             </div>
 
-            <div className="sm:mt-[50px]">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              className="sm:mt-[50px]"
+            >
               <div className="w-[584px] sm:w-full">
                 <img
                   className="h-[507px] sm:h-auto"
@@ -198,24 +206,59 @@ export default function Blog() {
 
           <div className="flex overflow-hidden sm:flex-wrap sm:gap-y-[20px] gap-x-[32px] mt-[80px] pb-[200px] sm:pb-[100px]">
             <div className="w-[405px] sm:w-full">
-              <img src="https://s3-alpha-sig.figma.com/img/179d/e0c8/f9780c5a36aeea5aaa1b0f822676263b?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bZq15Eu0Gfvf3x-kQ78aOoOkNXHuGvedSyTzxcHdeuBTlH0cCaCGBuqehFhH1S-YRJwMkBLJHyC1aCrWcUhhBwN2Lk1Y4eg8WrcD2WhS4O0jZGv-sZkcfpIBwaEaW91AmOPYUzra~l1W9wA4S3APOol~l3KfkxxvprL1hMJc7Os6yoaMTwgBxzdmAiUAUYCy8VuGGKdcuZoO~sLnWQOElHBCe6sUuR37L~CjnEf890PsYA9fN-OGC8qj2ogzhJYlK6ZW9QjurfMjsYhTEr4D3ywhknLeBE~hWedu0L~eyDU19kHICjt~-dFmjOXx5zDqzpv-4YtZVjkY82NtcwEF4w__" alt="" />
-              <h1 className="dark:text-white leading-[42px] text-[32px] sm:text-[18px]">List of UX Designer Portfolio / Case Studies where you can make money</h1>  
-              <p className="text-[#7E8492] text-[18px] sm:text-[16px]">Here are some portfolios / Case Studies from UX Designers that you can use as a reference for creating a portfolio. Two interesting things from their portfolio are:</p>
-              <button className="p-[16px_32px] mt-[24px] border-[1px] border-[#CED1D8] rounded-full dark:text-[white]">Read More</button>
-            </div>
-            
-            <div className="w-[405px] sm:w-full">
-              <img src="https://s3-alpha-sig.figma.com/img/499e/4db9/8cad6de10f6282efc82d1431d35a88b4?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jFK~Y44uvSVpSsd1c02p7mnEApBcHd8BXgrVEJewY03dtjZIl8Qdb1P7cAMMS10~JRPMqgaFzK~J8BMUKE3RHwLIEpbc~begWERypTbyuyHfacQths3FjmFG2BZq0j3Si3I3uEm460dXmbylqFd8IVJy3hvgpPgTJSWlGz8Lq-hXYks8IzzF0nAbmh~Sh8cWHe4uK~wVvkWB8mQy0WN6fnXK8gZnQSIRUq05E~KAIpVHOq8Iona~i-S6079T9IgXhBRXZDDgPb31JfMNJQbonw2epD9USYwT31YHUOqw10kEIN82dKI7nfV~QM5SFfGfEWXKgrusmQEHxdStHPpnkg__" alt="" />
-              <h1 className="dark:text-white leading-[42px] text-[32px] sm:text-[18px]">Skyrocketing in The Designing Career, Why Not?</h1>  
-              <p className="text-[#7E8492] text-[18px] sm:text-[16px]">Ever thought of jumping into the world of design as a career? If not, you may want to look at what the word ‘design’ actually means. Design is a method of designing aesthetic actions that are carried out.</p>
-              <button className="p-[16px_32px] mt-[24px] border-[1px] border-[#CED1D8] rounded-full dark:text-[white]">Read More</button>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/179d/e0c8/f9780c5a36aeea5aaa1b0f822676263b?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=bZq15Eu0Gfvf3x-kQ78aOoOkNXHuGvedSyTzxcHdeuBTlH0cCaCGBuqehFhH1S-YRJwMkBLJHyC1aCrWcUhhBwN2Lk1Y4eg8WrcD2WhS4O0jZGv-sZkcfpIBwaEaW91AmOPYUzra~l1W9wA4S3APOol~l3KfkxxvprL1hMJc7Os6yoaMTwgBxzdmAiUAUYCy8VuGGKdcuZoO~sLnWQOElHBCe6sUuR37L~CjnEf890PsYA9fN-OGC8qj2ogzhJYlK6ZW9QjurfMjsYhTEr4D3ywhknLeBE~hWedu0L~eyDU19kHICjt~-dFmjOXx5zDqzpv-4YtZVjkY82NtcwEF4w__"
+                alt=""
+              />
+              <h1 className="dark:text-white leading-[42px] text-[32px] sm:text-[18px]">
+                List of UX Designer Portfolio / Case Studies where you can make
+                money
+              </h1>
+              <p className="text-[#7E8492] text-[18px] sm:text-[16px]">
+                Here are some portfolios / Case Studies from UX Designers that
+                you can use as a reference for creating a portfolio. Two
+                interesting things from their portfolio are:
+              </p>
+              <button className="p-[16px_32px] mt-[24px] border-[1px] border-[#CED1D8] rounded-full dark:text-[white]">
+                Read More
+              </button>
             </div>
 
             <div className="w-[405px] sm:w-full">
-              <img className="h-[695px] w-[476px] sm:w-auto sm:h-auto" src="https://s3-alpha-sig.figma.com/img/9766/e83a/f787553f39ea36ca3d0575ddc92996e3?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XzI6r0~1gyBRsN1iaQCuoUl5RLivNnSkbYXhrgcaV0bLUOqTYyZZfwYJ5D0uuQbR0SdT3NN0KPPidlENIWOFq2pFvYPYldOCOwJYDZgy4ywS4d4PrAIkNLd7IYowjSzCjg~lP9DQidXbFJn5vrt3Iq-SFsVGgcWXGYWoxayG6eI8CuhyECWtitemfChE76wG~NRA-houArYJ6a7jy0Kqqo4YNHY5HatDSUUoKXyn5eOK7iMk48Qjq1pV9RCswlXa0fzKQxy5alJoFgZKwxGQHrPT-1QkQBaet4XUTdD44SSJBEEiIWEjyuDYSUSh00g8T92RBUt36Iz9CbI7SrevDw__" alt="" />
-              <h1 className="dark:text-white leading-[42px] text-[32px] sm:text-[18px]">Elements that may be missed when designing the UI</h1>  
-              <p className="text-[#7E8492] text-[18px] sm:text-[16px]">This is an article that talks about the little elements that are often overlooked when designing UI.</p>
-              <button className="p-[16px_32px] mt-[24px] border-[1px] border-[#CED1D8] rounded-full dark:text-[white]">Read More</button>
+              <img
+                src="https://s3-alpha-sig.figma.com/img/499e/4db9/8cad6de10f6282efc82d1431d35a88b4?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jFK~Y44uvSVpSsd1c02p7mnEApBcHd8BXgrVEJewY03dtjZIl8Qdb1P7cAMMS10~JRPMqgaFzK~J8BMUKE3RHwLIEpbc~begWERypTbyuyHfacQths3FjmFG2BZq0j3Si3I3uEm460dXmbylqFd8IVJy3hvgpPgTJSWlGz8Lq-hXYks8IzzF0nAbmh~Sh8cWHe4uK~wVvkWB8mQy0WN6fnXK8gZnQSIRUq05E~KAIpVHOq8Iona~i-S6079T9IgXhBRXZDDgPb31JfMNJQbonw2epD9USYwT31YHUOqw10kEIN82dKI7nfV~QM5SFfGfEWXKgrusmQEHxdStHPpnkg__"
+                alt=""
+              />
+              <h1 className="dark:text-white leading-[42px] text-[32px] sm:text-[18px]">
+                Skyrocketing in The Designing Career, Why Not?
+              </h1>
+              <p className="text-[#7E8492] text-[18px] sm:text-[16px]">
+                Ever thought of jumping into the world of design as a career? If
+                not, you may want to look at what the word ‘design’ actually
+                means. Design is a method of designing aesthetic actions that
+                are carried out.
+              </p>
+              <button className="p-[16px_32px] mt-[24px] border-[1px] border-[#CED1D8] rounded-full dark:text-[white]">
+                Read More
+              </button>
+            </div>
+
+            <div className="w-[405px] sm:w-full">
+              <img
+                className="h-[695px] w-[476px] sm:w-auto sm:h-auto"
+                src="https://s3-alpha-sig.figma.com/img/9766/e83a/f787553f39ea36ca3d0575ddc92996e3?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XzI6r0~1gyBRsN1iaQCuoUl5RLivNnSkbYXhrgcaV0bLUOqTYyZZfwYJ5D0uuQbR0SdT3NN0KPPidlENIWOFq2pFvYPYldOCOwJYDZgy4ywS4d4PrAIkNLd7IYowjSzCjg~lP9DQidXbFJn5vrt3Iq-SFsVGgcWXGYWoxayG6eI8CuhyECWtitemfChE76wG~NRA-houArYJ6a7jy0Kqqo4YNHY5HatDSUUoKXyn5eOK7iMk48Qjq1pV9RCswlXa0fzKQxy5alJoFgZKwxGQHrPT-1QkQBaet4XUTdD44SSJBEEiIWEjyuDYSUSh00g8T92RBUt36Iz9CbI7SrevDw__"
+                alt=""
+              />
+              <h1 className="dark:text-white leading-[42px] text-[32px] sm:text-[18px]">
+                Elements that may be missed when designing the UI
+              </h1>
+              <p className="text-[#7E8492] text-[18px] sm:text-[16px]">
+                This is an article that talks about the little elements that are
+                often overlooked when designing UI.
+              </p>
+              <button className="p-[16px_32px] mt-[24px] border-[1px] border-[#CED1D8] rounded-full dark:text-[white]">
+                Read More
+              </button>
             </div>
           </div>
         </section>

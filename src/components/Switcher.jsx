@@ -20,6 +20,7 @@ export default function Switcher() {
           checked={darkSide}
           onChange={toggleDarkMode}
           size={35}
+          moonColor="gray"
         />
       </div>
     </>

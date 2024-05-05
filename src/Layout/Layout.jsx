@@ -29,15 +29,15 @@ export default function Layout() {
     <>
       <nav data-aos="fade-down" className="flex items-center justify-between">
         <div className="flex items-center">
-          <img className="dark:hidden" src={logo} alt="" />
-          <img className="dark:block hidden" src={logo2} alt="" />
+          <Link to={"/"}><img className="dark:hidden" src={logo} alt="" /></Link>
+          <Link to={"/"}><img className="dark:block hidden" src={logo2} alt="" /></Link>
           <select
             className="ml-[30px] rounded-[10px] sm:hidden w-[50px] h-[40px] text-[17px]"
             onChange={(e) => changeLanguage(e.target.value)}
           >
+            <option value="en">en</option>
             <option value="ru">ru</option>
             <option value="tj">tj</option>
-            <option value="en">en</option>
           </select>
         </div>
 
@@ -47,9 +47,12 @@ export default function Layout() {
             <Link to={"/about"}>{t("nav.p2")}</Link>
             <Link to={"/blog"}>{t("nav.p3")}</Link>
             <Link to={"/pricing"}>{t("nav.p4")}</Link>
-            <button className="border-b-[1px] border-solid border-[black] dark:border-[white] ml-[36px]">
+            <Link
+              to={"/contact"}
+              className="border-b-[1px] border-solid border-[black] dark:border-[white] ml-[36px]"
+            >
               {t("nav.b")}
-            </button>
+            </Link>
           </div>
           <Switcher />
         </div>
@@ -69,7 +72,7 @@ export default function Layout() {
             >
               <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                  <div className="flex mr-[20px] items-center dark:text-[white] gap-x-[32px]">
+                  <div className="flex mr-[20px] items-center dark:text-[#000000] gap-x-[32px]">
                     <Link to={"/"}>{t("nav.p1")}</Link>
                     <Link to={"/about"}>{t("nav.p2")}</Link>
                     <Link to={"/blog"}>{t("nav.p3")}</Link>
@@ -99,13 +102,23 @@ export default function Layout() {
         </div>
       </nav>
       <Outlet />
-      <footer className="bg-[#1D1E25] pt-[112px] sm:pt-[51px] px-[20px]">
+      <footer
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        className="bg-[#1D1E25] pt-[112px] sm:pt-[51px] px-[20px]"
+      >
         <div className="flex justify-between sm:justify-start sm:items-start items-center sm:flex-col">
           <div>
-            <h1 className="text-[64px] sm:text-[24px] font-[600] text-white">{t("footer.h1")}</h1>
-            <h1 className="text-[#AFB3BB] sm:w-[292px] sm:text-[16px] text-[18px] w-[523px]">{t("footer.p")}</h1>
+            <h1 className="text-[64px] sm:text-[24px] font-[600] text-white">
+              {t("footer.h1")}
+            </h1>
+            <h1 className="text-[#AFB3BB] sm:w-[292px] sm:text-[16px] text-[18px] w-[523px]">
+              {t("footer.p")}
+            </h1>
           </div>
-          <h1 className="p-[16px_32px] sm:mt-[24px] sm:p-[12px_24px] rounded-[100px] font-[700] bg-[white]">{t("footer.b")}</h1>          
+          <h1 className="p-[16px_32px] sm:mt-[24px] sm:p-[12px_24px] rounded-[100px] font-[700] bg-[white]">
+            {t("footer.b")}
+          </h1>
         </div>
 
         <div className="flex justify-between items-center sm:mt-[60px] mt-[130px]">
@@ -116,35 +129,75 @@ export default function Layout() {
 
           <div className="flex sm:hidden w-[764px] justify-between items-center">
             <div className="">
-              <p className="text-[#FFFFFF] font-[700]">{t("footer.div.card2.h3")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[24px]">{t("footer.div.card2.p1")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card2.p2")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card2.p3")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card2.p4")}</p>
+              <p className="text-[#FFFFFF] font-[700]">
+                {t("footer.div.card2.h3")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[24px]">
+                {t("footer.div.card2.p1")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card2.p2")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card2.p3")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card2.p4")}
+              </p>
             </div>
-            
+
             <div className="">
-              <p className="text-[#FFFFFF] font-[700]">{t("footer.div.card3.h3")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[24px]">{t("footer.div.card3.p1")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card3.p2")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card3.p3")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card3.p4")}</p>
+              <p className="text-[#FFFFFF] font-[700]">
+                {t("footer.div.card3.h3")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[24px]">
+                {t("footer.div.card3.p1")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card3.p2")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card3.p3")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card3.p4")}
+              </p>
             </div>
-            
+
             <div className="">
-              <p className="text-[#FFFFFF] font-[700]">{t("footer.div.card4.h3")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[24px]">{t("footer.div.card4.p1")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card4.p2")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card4.p3")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card4.p4")}</p>
+              <p className="text-[#FFFFFF] font-[700]">
+                {t("footer.div.card4.h3")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[24px]">
+                {t("footer.div.card4.p1")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card4.p2")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card4.p3")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card4.p4")}
+              </p>
             </div>
-            
+
             <div className="">
-              <p className="text-[#FFFFFF] font-[700]">{t("footer.div.card5.h3")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[24px]">{t("footer.div.card5.p1")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card5.p2")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card5.p3")}</p>
-              <p className="text-[#7E8492] font-[400] mt-[6px]">{t("footer.div.card5.p4")}</p>
+              <p className="text-[#FFFFFF] font-[700]">
+                {t("footer.div.card5.h3")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[24px]">
+                {t("footer.div.card5.p1")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card5.p2")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card5.p3")}
+              </p>
+              <p className="text-[#7E8492] font-[400] mt-[6px]">
+                {t("footer.div.card5.p4")}
+              </p>
             </div>
           </div>
         </div>
@@ -154,7 +207,7 @@ export default function Layout() {
           <div className="text-white text-[14px] flex justify-between sm:w-[100%]">
             <p className="ml-[72px] sm:ml-[0px]">{t("footer.div2.p1")}</p>
             <p className="ml-[40px] sm:ml-[0px]">{t("footer.div2.p2")}</p>
-            <p className="ml-[40px] sm:ml-[0px]">{t("footer.div2.p3")}</p>  
+            <p className="ml-[40px] sm:ml-[0px]">{t("footer.div2.p3")}</p>
           </div>
           <p className="ml-[352px] sm:ml-[0px]">{t("footer.div2.p4")}</p>
         </div>

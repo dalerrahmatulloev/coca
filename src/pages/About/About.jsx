@@ -12,6 +12,7 @@ import "./style.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import Ender from "./components/Ender/Ender";
 export default function About() {
   return (
     <>
@@ -33,7 +34,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex items-start relative sm:flex-col overflow-hidden pb-[165px] sm:pb-[80px]">
+        <div data-aos="fade-up" className="flex items-start relative sm:flex-col overflow-hidden pb-[165px] sm:pb-[80px]">
           <img
             className="w-[502px] h-[629px] sm:w-auto sm:h-auto"
             src="https://s3-alpha-sig.figma.com/img/9dc4/3ea8/7c29b788c5623e6a9566cbcf1874ea1d?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Haj-Gf~WsvkhwUGeCaVLWKw4s6He~e89qh7qguaxF0mwrqsmJ3JYuY1uYMn3TpcwC9H3FCCI7QFEe1rB5tOy1yE8f0Io3xL5aiBv5RTihCHEr49H4al0Qeg-Iv3JHxnItNelBVUgGIMKUMvlXsSBBch6i3bA0gC9okcd1Vx5IL7BVV1ifXBS-n05tMDJvz1HanGgPHCcJ6JlKJsystbfs44lY5aJvnkYJaPfmSk2l6J6YYwgDBcc8GT9ewDpjxfwuFL0moJdok~GSzy47iYXEPDZ7aOG6Oj8XYGbb6Z91IhCx6S2tOZHKyGjTaRIAOxaLE5sNjsPG~j1~pDicaetCA__"
@@ -65,13 +66,13 @@ export default function About() {
         </div>
       </header>
 
-      <main>
+      <main className="overflow-hidden">
         <section>
           <div className="border-t-[1px] flex justify-between items-center sm:flex-col sm:justify-center sm:gap-y-[30px] border-[#EDEDED] py-[80px] sm:py-[30px]">
-            <h1 className="dark:text-[#8b8282] w-[480px] text-[56px] sm:text-[28px] leading-[67.2px] sm:leading-6 sm:w-full">
+            <h1 data-aos="fade-right" className="dark:text-[#8b8282] w-[480px] text-[56px] sm:text-[28px] leading-[67.2px] sm:leading-6 sm:w-full">
               Powerful ideas & sales acceleration
             </h1>
-            <p className="dark:text-[#cacaca] w-[522px] text-[25px] sm:text-[18px] leading-[36px] sm:leading-6 sm:w-full">
+            <p data-aos="fade-left" className="dark:text-[#cacaca] w-[522px] text-[25px] sm:text-[18px] leading-[36px] sm:leading-6 sm:w-full">
               We are a software development firm specializing in digital
               products. We build beautiful, functional and cross-platform
               solutions that are accessible to all.
@@ -79,169 +80,174 @@ export default function About() {
           </div>
 
           <div className="mt-[160px] sm:mt-[80px]">
-            <h1 className="dark:text-[#8b8282] w-[803px] text-[56px] sm:text-[28px] leading-[67.2px] sm:leading-6 sm:w-full">
+            <h1 data-aos="fade-right" className="dark:text-[#8b8282] w-[803px] text-[56px] sm:text-[28px] leading-[67.2px] sm:leading-6 sm:w-full">
               Meet our team of creators, designers, and world-class problem
               solvers
             </h1>
-            <p className="text-[18px] w-[534px] sm:text-[16px] sm:w-full mt-[24px] text-[#7E8492]">
+            <p data-aos="fade-right" className="text-[18px] w-[534px] sm:text-[16px] sm:w-full mt-[24px] text-[#7E8492]">
               To become the company that customers want, it takes a group of
               passionate people. Get to know the people who lead
             </p>
-            <Swiper
-              slidesPerView={3}
-              spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-              className="mt-[80px] sm:mt-[50px]"
-            >
-              <SwiperSlide className=" bg-transparent">
-                <div className="h-[521px] w-[379px]">
-                  <div className="w-[379px] h-[434px]">
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/05be/041b/58b5e1fe37be4a6bb5a74f76d7c0f06d?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X7AU2ZUGa1K3XLnBe9G3pzvAx9xGi3CynxQ2wOOzKV570MUejqqeqOJV9erxdv2cQNbvGeDgomQeab47ttpK9CpadVfY-pCQKYgi~Heaaa08spaAxHWawl7FFHRxcEddPrG5EHwwahOh182pO4~pTqb26Wa0ySNPBPJIqSseaXtikVnXt7bbFLBBBFFJdfUkfotk07uRZihPn5hw4Ii8ciZQpEvk2S8a7VjpC6-odV7ZRXQ-XS6yXERH4ubhfoB91ikAN3KdFpp0wtEtVmpDHWRxQzEnIvS~k0gMQV5oKZHSBtOR68XCnMxiDc8meBxT7uReOLkvCvdcnuPd6Cs7mw__"
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex justify-between mt-[16px] items-start">
-                    <div className="text-left">
-                      <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
-                        Arlyne Stefano
-                      </h1>
-                      <p className="text-[#7E8492] text-[18px]">
-                        Founder & CEO
-                      </p>
+            <div className="sm:hidden">
+              <Swiper data-aos="flip-up"
+                slidesPerView={3}
+                spaceBetween={30}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination]}
+                className="mt-[80px] sm:mt-[50px]"
+              >
+                <SwiperSlide className=" bg-transparent">
+                  <div className="h-[521px] w-[379px]">
+                    <div className="w-[379px] h-[434px]">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/05be/041b/58b5e1fe37be4a6bb5a74f76d7c0f06d?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X7AU2ZUGa1K3XLnBe9G3pzvAx9xGi3CynxQ2wOOzKV570MUejqqeqOJV9erxdv2cQNbvGeDgomQeab47ttpK9CpadVfY-pCQKYgi~Heaaa08spaAxHWawl7FFHRxcEddPrG5EHwwahOh182pO4~pTqb26Wa0ySNPBPJIqSseaXtikVnXt7bbFLBBBFFJdfUkfotk07uRZihPn5hw4Ii8ciZQpEvk2S8a7VjpC6-odV7ZRXQ-XS6yXERH4ubhfoB91ikAN3KdFpp0wtEtVmpDHWRxQzEnIvS~k0gMQV5oKZHSBtOR68XCnMxiDc8meBxT7uReOLkvCvdcnuPd6Cs7mw__"
+                        alt=""
+                      />
                     </div>
-                    <div className="">
-                      <img src={Frame1171275129} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className=" bg-transparent">
-                <div className="h-[521px] w-[379px]">
-                  <div className="w-[379px] h-[434px]">
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/30d4/a462/ea7b6e1428ffcb7ed5d646ca522e5a23?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OKK4VWKLnsrtWeYmKworUc5nGx-p~~b5zeee4v2bwZYd5IhmDIolll90KmMZCt2BfQtr6mQnfId3zYz5beF4RQozsLdGLhIv-7n-gBBfNoU8LtMLmy27wr2QqTGiZWzccYh2978AGtldyXInqVZURMqhO7Y-iOdSq38RM3Lcs3CERjE3p17Ir9KwSr7wxGDn79bS816YXCus-WsCGIXzqeujD3MzXSk~M4HRkdaRBTGZWdxDinPoEOT98QsAfNnPRfMxepQ4uVsbm3oHETJ5eEZFrbeE7OprXOtczBXqvs6Ht-rlBaf5JMuNqSme-Vhx1Mak8NBul-J2BYZl9P-hYQ__"
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex justify-between mt-[16px] items-start">
-                    <div className="text-left">
-                      <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
-                        Katy Cristy
-                      </h1>
-                      <p className="text-[#7E8492] text-[18px]">
-                        Chief Technology Officer
-                      </p>
-                    </div>
-                    <div className="">
-                      <img src={Frame1171275129} alt="" />
+                    <div className="flex justify-between mt-[16px] items-start">
+                      <div className="text-left">
+                        <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
+                          Arlyne Stefano
+                        </h1>
+                        <p className="text-[#7E8492] text-[18px]">
+                          Founder & CEO
+                        </p>
+                      </div>
+                      <div className="">
+                        <img src={Frame1171275129} alt="" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className=" bg-transparent">
-                <div className="h-[521px] w-[379px]">
-                  <div className="w-[379px] h-[434px]">
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/3bbe/168e/ab287460eef89ff5351e750f87e0634b?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EYV7JpUwcxmhNPRReIjx-cW7dbkoxTNuJ57HKrWJT2hPS46oJYvmYske3VyfdEvlZYV~~MconeMpfJ7odV-WQfBg3MifhdOBSgGrZTalQIXaHKWdr8moYCVa743~yRqaRMp4Xbd1hhOAHsYspQfX5RG1B2bXQ~W5L~K3eCIuR7M8lozDtJw3dLPUFKuvD10XzC6S61PVx8ySKTy1oIFABH64KELU5F16LVwjKbc8ddY3wydI85fgIeXM4vNKvTYTxgMFhIlVKxcA6jBo0jQ6WQwwO9CPPBoW3uW7aInKNgku9oqAARCaHn6ZsNt2eEuyI03fQcFONAHu0lf9Xhs45w__"
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex justify-between mt-[16px] items-start">
-                    <div className="text-left">
-                      <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
-                        Roger Dzawin
-                      </h1>
-                      <p className="text-[#7E8492] text-[18px]">
-                        Chief Technology Officer
-                      </p>
+                </SwiperSlide>
+                <SwiperSlide className=" bg-transparent">
+                  <div className="h-[521px] w-[379px]">
+                    <div className="w-[379px] h-[434px]">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/30d4/a462/ea7b6e1428ffcb7ed5d646ca522e5a23?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OKK4VWKLnsrtWeYmKworUc5nGx-p~~b5zeee4v2bwZYd5IhmDIolll90KmMZCt2BfQtr6mQnfId3zYz5beF4RQozsLdGLhIv-7n-gBBfNoU8LtMLmy27wr2QqTGiZWzccYh2978AGtldyXInqVZURMqhO7Y-iOdSq38RM3Lcs3CERjE3p17Ir9KwSr7wxGDn79bS816YXCus-WsCGIXzqeujD3MzXSk~M4HRkdaRBTGZWdxDinPoEOT98QsAfNnPRfMxepQ4uVsbm3oHETJ5eEZFrbeE7OprXOtczBXqvs6Ht-rlBaf5JMuNqSme-Vhx1Mak8NBul-J2BYZl9P-hYQ__"
+                        alt=""
+                      />
                     </div>
-                    <div className="">
-                      <img src={Frame1171275129} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className=" bg-transparent">
-                <div className="h-[521px] w-[379px]">
-                  <div className="w-[379px] h-[434px]">
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/05be/041b/58b5e1fe37be4a6bb5a74f76d7c0f06d?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X7AU2ZUGa1K3XLnBe9G3pzvAx9xGi3CynxQ2wOOzKV570MUejqqeqOJV9erxdv2cQNbvGeDgomQeab47ttpK9CpadVfY-pCQKYgi~Heaaa08spaAxHWawl7FFHRxcEddPrG5EHwwahOh182pO4~pTqb26Wa0ySNPBPJIqSseaXtikVnXt7bbFLBBBFFJdfUkfotk07uRZihPn5hw4Ii8ciZQpEvk2S8a7VjpC6-odV7ZRXQ-XS6yXERH4ubhfoB91ikAN3KdFpp0wtEtVmpDHWRxQzEnIvS~k0gMQV5oKZHSBtOR68XCnMxiDc8meBxT7uReOLkvCvdcnuPd6Cs7mw__"
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex justify-between mt-[16px] items-start">
-                    <div className="text-left">
-                      <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
-                        Arlyne Stefano
-                      </h1>
-                      <p className="text-[#7E8492] text-[18px]">
-                        Founder & CEO
-                      </p>
-                    </div>
-                    <div className="">
-                      <img src={Frame1171275129} alt="" />
+                    <div className="flex justify-between mt-[16px] items-start">
+                      <div className="text-left">
+                        <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
+                          Katy Cristy
+                        </h1>
+                        <p className="text-[#7E8492] text-[18px]">
+                          Chief Technology Officer
+                        </p>
+                      </div>
+                      <div className="">
+                        <img src={Frame1171275129} alt="" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className=" bg-transparent">
-                <div className="h-[521px] w-[379px]">
-                  <div className="w-[379px] h-[434px]">
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/30d4/a462/ea7b6e1428ffcb7ed5d646ca522e5a23?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OKK4VWKLnsrtWeYmKworUc5nGx-p~~b5zeee4v2bwZYd5IhmDIolll90KmMZCt2BfQtr6mQnfId3zYz5beF4RQozsLdGLhIv-7n-gBBfNoU8LtMLmy27wr2QqTGiZWzccYh2978AGtldyXInqVZURMqhO7Y-iOdSq38RM3Lcs3CERjE3p17Ir9KwSr7wxGDn79bS816YXCus-WsCGIXzqeujD3MzXSk~M4HRkdaRBTGZWdxDinPoEOT98QsAfNnPRfMxepQ4uVsbm3oHETJ5eEZFrbeE7OprXOtczBXqvs6Ht-rlBaf5JMuNqSme-Vhx1Mak8NBul-J2BYZl9P-hYQ__"
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex justify-between mt-[16px] items-start">
-                    <div className="text-left">
-                      <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
-                        Katy Cristy
-                      </h1>
-                      <p className="text-[#7E8492] text-[18px]">
-                        Chief Technology Officer
-                      </p>
+                </SwiperSlide>
+                <SwiperSlide className=" bg-transparent">
+                  <div className="h-[521px] w-[379px]">
+                    <div className="w-[379px] h-[434px]">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/3bbe/168e/ab287460eef89ff5351e750f87e0634b?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EYV7JpUwcxmhNPRReIjx-cW7dbkoxTNuJ57HKrWJT2hPS46oJYvmYske3VyfdEvlZYV~~MconeMpfJ7odV-WQfBg3MifhdOBSgGrZTalQIXaHKWdr8moYCVa743~yRqaRMp4Xbd1hhOAHsYspQfX5RG1B2bXQ~W5L~K3eCIuR7M8lozDtJw3dLPUFKuvD10XzC6S61PVx8ySKTy1oIFABH64KELU5F16LVwjKbc8ddY3wydI85fgIeXM4vNKvTYTxgMFhIlVKxcA6jBo0jQ6WQwwO9CPPBoW3uW7aInKNgku9oqAARCaHn6ZsNt2eEuyI03fQcFONAHu0lf9Xhs45w__"
+                        alt=""
+                      />
                     </div>
-                    <div className="">
-                      <img src={Frame1171275129} alt="" />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className=" bg-transparent">
-                <div className="h-[521px] w-[379px]">
-                  <div className="w-[379px] h-[434px]">
-                    <img
-                      src="https://s3-alpha-sig.figma.com/img/3bbe/168e/ab287460eef89ff5351e750f87e0634b?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EYV7JpUwcxmhNPRReIjx-cW7dbkoxTNuJ57HKrWJT2hPS46oJYvmYske3VyfdEvlZYV~~MconeMpfJ7odV-WQfBg3MifhdOBSgGrZTalQIXaHKWdr8moYCVa743~yRqaRMp4Xbd1hhOAHsYspQfX5RG1B2bXQ~W5L~K3eCIuR7M8lozDtJw3dLPUFKuvD10XzC6S61PVx8ySKTy1oIFABH64KELU5F16LVwjKbc8ddY3wydI85fgIeXM4vNKvTYTxgMFhIlVKxcA6jBo0jQ6WQwwO9CPPBoW3uW7aInKNgku9oqAARCaHn6ZsNt2eEuyI03fQcFONAHu0lf9Xhs45w__"
-                      alt=""
-                    />
-                  </div>
-                  <div className="flex justify-between mt-[16px] items-start">
-                    <div className="text-left">
-                      <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
-                        Roger Dzawin
-                      </h1>
-                      <p className="text-[#7E8492] text-[18px]">
-                        Chief Technology Officer
-                      </p>
-                    </div>
-                    <div className="">
-                      <img src={Frame1171275129} alt="" />
+                    <div className="flex justify-between mt-[16px] items-start">
+                      <div className="text-left">
+                        <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
+                          Roger Dzawin
+                        </h1>
+                        <p className="text-[#7E8492] text-[18px]">
+                          Chief Technology Officer
+                        </p>
+                      </div>
+                      <div className="">
+                        <img src={Frame1171275129} alt="" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+                </SwiperSlide>
+                <SwiperSlide className=" bg-transparent">
+                  <div className="h-[521px] w-[379px]">
+                    <div className="w-[379px] h-[434px]">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/05be/041b/58b5e1fe37be4a6bb5a74f76d7c0f06d?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X7AU2ZUGa1K3XLnBe9G3pzvAx9xGi3CynxQ2wOOzKV570MUejqqeqOJV9erxdv2cQNbvGeDgomQeab47ttpK9CpadVfY-pCQKYgi~Heaaa08spaAxHWawl7FFHRxcEddPrG5EHwwahOh182pO4~pTqb26Wa0ySNPBPJIqSseaXtikVnXt7bbFLBBBFFJdfUkfotk07uRZihPn5hw4Ii8ciZQpEvk2S8a7VjpC6-odV7ZRXQ-XS6yXERH4ubhfoB91ikAN3KdFpp0wtEtVmpDHWRxQzEnIvS~k0gMQV5oKZHSBtOR68XCnMxiDc8meBxT7uReOLkvCvdcnuPd6Cs7mw__"
+                        alt=""
+                      />
+                    </div>
+                    <div className="flex justify-between mt-[16px] items-start">
+                      <div className="text-left">
+                        <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
+                          Arlyne Stefano
+                        </h1>
+                        <p className="text-[#7E8492] text-[18px]">
+                          Founder & CEO
+                        </p>
+                      </div>
+                      <div className="">
+                        <img src={Frame1171275129} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className=" bg-transparent">
+                  <div className="h-[521px] w-[379px]">
+                    <div className="w-[379px] h-[434px]">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/30d4/a462/ea7b6e1428ffcb7ed5d646ca522e5a23?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OKK4VWKLnsrtWeYmKworUc5nGx-p~~b5zeee4v2bwZYd5IhmDIolll90KmMZCt2BfQtr6mQnfId3zYz5beF4RQozsLdGLhIv-7n-gBBfNoU8LtMLmy27wr2QqTGiZWzccYh2978AGtldyXInqVZURMqhO7Y-iOdSq38RM3Lcs3CERjE3p17Ir9KwSr7wxGDn79bS816YXCus-WsCGIXzqeujD3MzXSk~M4HRkdaRBTGZWdxDinPoEOT98QsAfNnPRfMxepQ4uVsbm3oHETJ5eEZFrbeE7OprXOtczBXqvs6Ht-rlBaf5JMuNqSme-Vhx1Mak8NBul-J2BYZl9P-hYQ__"
+                        alt=""
+                      />
+                    </div>
+                    <div className="flex justify-between mt-[16px] items-start">
+                      <div className="text-left">
+                        <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
+                          Katy Cristy
+                        </h1>
+                        <p className="text-[#7E8492] text-[18px]">
+                          Chief Technology Officer
+                        </p>
+                      </div>
+                      <div className="">
+                        <img src={Frame1171275129} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className=" bg-transparent">
+                  <div className="h-[521px] w-[379px]">
+                    <div className="w-[379px] h-[434px]">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/3bbe/168e/ab287460eef89ff5351e750f87e0634b?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EYV7JpUwcxmhNPRReIjx-cW7dbkoxTNuJ57HKrWJT2hPS46oJYvmYske3VyfdEvlZYV~~MconeMpfJ7odV-WQfBg3MifhdOBSgGrZTalQIXaHKWdr8moYCVa743~yRqaRMp4Xbd1hhOAHsYspQfX5RG1B2bXQ~W5L~K3eCIuR7M8lozDtJw3dLPUFKuvD10XzC6S61PVx8ySKTy1oIFABH64KELU5F16LVwjKbc8ddY3wydI85fgIeXM4vNKvTYTxgMFhIlVKxcA6jBo0jQ6WQwwO9CPPBoW3uW7aInKNgku9oqAARCaHn6ZsNt2eEuyI03fQcFONAHu0lf9Xhs45w__"
+                        alt=""
+                      />
+                    </div>
+                    <div className="flex justify-between mt-[16px] items-start">
+                      <div className="text-left">
+                        <h1 className="text-[#1D1E25] text-[24px] dark:text-[#4b4d5b]">
+                          Roger Dzawin
+                        </h1>
+                        <p className="text-[#7E8492] text-[18px]">
+                          Chief Technology Officer
+                        </p>
+                      </div>
+                      <div className="">
+                        <img src={Frame1171275129} alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>  
+            </div>
+            <div className="hidden mt-[32px] sm:block">
+              <Ender/>
+            </div>
           </div>
 
           <div className="flex justify-between mt-[100px] sm:pb-[80px] sm:mt-[56px] pb-[160px] items-center sm:flex-col smLgap-y-[30px]">
-            <h1 className="dark:text-[#8b8282] w-[626px] text-[56px] sm:text-[28px] leading-[67.2px] sm:leading-7 sm:w-full">
+            <h1 data-aos="zoom-in-right" className="dark:text-[#8b8282] w-[626px] text-[56px] sm:text-[28px] leading-[67.2px] sm:leading-7 sm:w-full">
               Join our team, The one with the master touch
             </h1>
-            <div className="">
+            <div data-aos="zoom-in-left" className="">
               <p className="dark:text-[#cacaca] sm:mt-[20px] w-[506px] text-[18px] sm:text-[16px] leading-[32px] sm:leading-5 sm:w-full">
                 We believe it takes great people to make a great product. That’s
                 why we hire not only the perfect professional fits, but people

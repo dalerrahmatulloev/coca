@@ -8,6 +8,8 @@ import Layout from "./Layout/Layout";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
+import Pricing from "./pages/Pricing/Pricing";
+import Contact from "./pages/Contact/Contact";
 
 
 function App() {
@@ -31,6 +33,14 @@ function App() {
         {
           path: "/blog",
           element: <Blog/>,
+        },
+        {
+          path: "/pricing",
+          element: <Pricing/>,
+        },
+        {
+          path: "/contact",
+          element: <Contact/>,
         }
       ]
     }
